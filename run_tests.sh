@@ -1,0 +1,2 @@
+nosetests -w ./test
+
