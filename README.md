@@ -1,7 +1,7 @@
 python_flask_mongoengine_restapi
 ================================
 
-Sample python app for building a REST API with Flask and Mongoengine
+Sample WSGI python app for building a REST API with Flask and Mongoengine
 
 ## Recommended Usage ##
  1. Install Vagrant & VirtualBox
@@ -14,6 +14,7 @@ Sample python app for building a REST API with Flask and Mongoengine
  1. Application served as a WSGI app from Apache
  1. Mongoengine is used to store data to MongoDB
  1. Example of custom exceptions for the API
+ 1. Example of custom logging of application and unittests
  1. Curl scripts showing how to pass in JSON data
  1. Unit tests excercising the REST API
  

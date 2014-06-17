@@ -13,8 +13,7 @@ else:
 import sampleapp
 from sampleapp.models import Item
 
-DB_NAME = "test_sampleapp"
-LOG_CONFIG_FILE = os.path.join(os.path.abspath(os.path.dirname(__file__)), "config/unittests.cfg")
+CONFIG_FILE = os.path.join(os.path.abspath(os.path.dirname(__file__)), "config/unittests.cfg")
 
 class SampleAppTestCase(unittest.TestCase):
 
@@ -23,7 +22,7 @@ class SampleAppTestCase(unittest.TestCase):
 
     def setUp(self):
         sampleapp.app.config['TESTING'] = True
-        sampleapp.initialize(DB_NAME, LOG_CONFIG_FILE)
+        sampleapp.initialize(CONFIG_FILE)
         self.app = sampleapp.app.test_client()
         self.drop_collections()
 

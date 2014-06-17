@@ -24,6 +24,10 @@ if [ ! -f /etc/sampleapp ]; then
   mkdir -p /etc/sampleapp
 fi
 
+if [ ! -f /etc/sampleapp/sampleapp.cfg ]; then
+  ln -s ${SRC_DIR}/etc/sampleapp/sampleapp.cfg /etc/sampleapp/sampleapp.cfg
+fi
+
 if [ ! -f /etc/sampleapp/logging.cfg ]; then
   ln -s ${SRC_DIR}/etc/sampleapp/logging.cfg /etc/sampleapp/logging.cfg
 fi
@@ -49,5 +53,7 @@ cd /vagrant/curl_scripts
 ./create.sh test_1
 ./create.sh test_2
 ./create.sh test_3
+./create.sh test_4
+./create.sh test_5
 popd 
 
